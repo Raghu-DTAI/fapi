@@ -17,6 +17,5 @@ print(number1,number2)
 op={'operation':option,'x':number1,'y':number2}
 print(json.dumps(op))
 if st.button("Calculate"):
-    result=requests.post(url = "http://localhost:8000/calculate", 
-              data = json.dumps(op))
+    result=requests.post(url = "http://backend:8000/calculate",data = json.dumps(op))
     st.write((result.text))

@@ -1,0 +1,22 @@
+version: '3'
+networks:
+  bridge:
+
+
+
+services:
+
+  backend:
+    image: backend
+    # ports:
+    #   - "8000:8000"
+    networks:
+      - bridge
+  frontend:
+    image: frontend
+    networks:
+      - bridge
+    ports:
+      - "8051:8051"
+
+
